@@ -34,7 +34,7 @@ vector<ld> readFileToVec(string name, vector<string> &heading, bool header = tru
     while (std::getline(file, str)){
         count--;
         if(count < 0)
-            v.pb(stoi(str));
+            v.pb(stold(str));
 		else
 			heading.pb(str);
     }
@@ -129,7 +129,8 @@ int _tmain(int argc, _TCHAR* argv[])
 	// These parameters have to be set correctly before code execution
 	string keywords[2] = {"yes", "no"};
     int nSamples = 10;
-	string dir = "C:/Users/Sanjai Kumar Agrawal/Desktop/CS566/Data/";
+	string dir = "./Data/";
+
     string name;
     vector<ld> v;
 	vector<string> heading;
@@ -167,4 +168,3 @@ int _tmain(int argc, _TCHAR* argv[])
 	getchar();
 	return 0;
 }
-
